@@ -1,0 +1,45 @@
+<h1 *ngIf="isAddMode">Personal User</h1>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="mat-row">
+
+        <div class="mat-col-quarter">
+            <mat-form-field appearance="outline" class="control-w">
+                <mat-label>ID Number</mat-label>
+                <input type="text" matInput placeholder="First Name" formControlName="idNumber" minlength="13" pattern="[0-9]+">
+                <mat-hint>Your ID Number</mat-hint>
+            </mat-form-field>
+   
+
+            <br />
+            <mat-form-field appearance="outline" class="control-w">
+                <mat-label>First Name</mat-label>
+                <input type="text" matInput placeholder="First Name" formControlName="Name"   pattern="[a-zA-Z][a-zA-Z\s]*" 
+                >
+                <mat-hint>Your name</mat-hint>
+            </mat-form-field>
+
+            <br />
+            <mat-form-field appearance="outline" class="control-w">
+                <mat-label>OTP</mat-label>
+                <input type="text" matInput placeholder="Last Name" formControlName="OTP">
+                <mat-hint>Your OTP</mat-hint>
+            </mat-form-field>
+        </div>
+        <br />
+        <button mat-raised-button color="primary" [disabled]="loading">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            Save
+        </button>
+
+
+        <a (click)="Close()" mat-button>Cancel</a>
+        <br />
+        <br />
+        <mat-label>By clicking next, I agree that the above information is
+            accurate</mat-label>
+
+        <br />
+    </div>
+
+
+</form>
