@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CarPoolModelStoreContainer" CdmEntityContainer="CarPoolEntities">
+    <EntitySetMapping Name="Passenger_Pool">
+      <EntityTypeMapping TypeName="CarPoolModel.Passenger_Pool">
+        <MappingFragment StoreEntitySet="Passenger_Pool">
+          <ScalarProperty Name="Passenger_Pool_ID" ColumnName="Passenger_Pool_ID" />
+          <ScalarProperty Name="Register_ID" ColumnName="Register_ID" />
+          <ScalarProperty Name="User_Car_Pool_ID" ColumnName="User_Car_Pool_ID" />
+          <ScalarProperty Name="Status_ID" ColumnName="Status_ID" />
+          <ScalarProperty Name="Date_Joined" ColumnName="Date_Joined" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Registers">
+      <EntityTypeMapping TypeName="CarPoolModel.Register">
+        <MappingFragment StoreEntitySet="Register">
+          <ScalarProperty Name="Register_ID" ColumnName="Register_ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Status">
+      <EntityTypeMapping TypeName="CarPoolModel.Status">
+        <MappingFragment StoreEntitySet="Status">
+          <ScalarProperty Name="Status_ID" ColumnName="Status_ID" />
+          <ScalarProperty Name="Status_Description" ColumnName="Status_Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User_Car_Pool">
+      <EntityTypeMapping TypeName="CarPoolModel.User_Car_Pool">
+        <MappingFragment StoreEntitySet="User_Car_Pool">
+          <ScalarProperty Name="User_Car_Pool_ID" ColumnName="User_Car_Pool_ID" />
+          <ScalarProperty Name="Departure" ColumnName="Departure" />
+          <ScalarProperty Name="Expected_Arrival" ColumnName="Expected_Arrival" />
+          <ScalarProperty Name="Origin" ColumnName="Origin" />
+          <ScalarProperty Name="Days" ColumnName="Days" />
+          <ScalarProperty Name="Destination" ColumnName="Destination" />
+          <ScalarProperty Name="Available_Seats" ColumnName="Available_Seats" />
+          <ScalarProperty Name="Number_Of_Passengers" ColumnName="Number_Of_Passengers" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="Register_ID" ColumnName="Register_ID" />
+          <ScalarProperty Name="Date_Created" ColumnName="Date_Created" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
